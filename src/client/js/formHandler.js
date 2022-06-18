@@ -24,17 +24,22 @@ const makeCall = async function(text2){
 
 const handleSubmit = async function(event) {
     event.preventDefault();
-    const s = document.getElementById('semantics');
-    const text = document.getElementById('text').value;
-    const result = await Client.makeCall(text);
-    s.innerHTML = result;
+    
     
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Client.checkForName(formText)
-    console.log("::: Form Submitted :::")
+    const valid = Client.checkForName(formText)
+    if (valid){
+        const s = document.getElementById('semantics');
+        const text = document.getElementById('text').value;
+        const result = await Client.makeCall(text);
+        s.innerHTML = result;
+        console.log("::: Form Submitted :::")
+        document.getElementById('results').innerHTML = formText;
+    }
     
-    document.getElementById('results').innerHTML = formText;
+    
+    
     
     
     
