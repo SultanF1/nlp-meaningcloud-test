@@ -26,14 +26,14 @@
         <main>
             <section>
                 <form class="" onsubmit="return handleSubmit('click')">
-                    <input id="name" type="text" name="input" value="" onblur="Client.onBlur()" placeholder="Name">
+                    <input id="url" type="text" name="input" value="" onblur="Client.onBlur()" placeholder="Name">
                     <input id="text" type="text" name="text" value="" onblur="Client.onBlur()" placeholder="Text to be analyzed">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section>
-                <strong>name:</strong>
+                <strong>URL:</strong>
                 <div id="results"></div>
                 <strong>Semantics:</strong>
                 <div id="semantics"></div>

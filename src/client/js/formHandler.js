@@ -27,8 +27,8 @@ const handleSubmit = async function(event) {
     
     
     // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    const valid = Client.checkForName(formText)
+    let formText = document.getElementById('url').value
+    const valid = Client.checkURL(formText)
     if (valid){
         const s = document.getElementById('semantics');
         const text = document.getElementById('text').value;
